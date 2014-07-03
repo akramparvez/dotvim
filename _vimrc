@@ -29,7 +29,6 @@ function MyDiff()
 endfunction
 
 "Personal Settings.
-"More to be added soon.
 execute pathogen#infect()
 filetype plugin indent on
 syntax on
@@ -39,17 +38,18 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
  
 "Set Color Scheme and Font Options
-colorscheme lucius
-set guifont=Consolas:h12
+colorscheme obsidian2 
+set guifont=Powerline_Consolas:h12
  
 "set line no, buffer, search, highlight, autoindent and more.
 set nu
 set hidden
 set ignorecase
 set incsearch
-set smartcase
+set smartcase "ignore case if search pattern is all lowercase
 set showmatch
 set autoindent
+set copyindent
 set ruler
 set vb
 set viminfo+=n$VIM/_viminfo
@@ -58,3 +58,32 @@ set showcmd
 set mouse=a
 set history=1000
 set undolevels=1000
+set backspace=indent,eol,start "allow backspacing over everything
+set shiftwidth=4 "number of spaces to used for autoindenting
+set smarttab "insert tabs on the start line according to shiftwidth
+set hlsearch "highlight search terms
+set wildignore=*.swp,*.pyc
+set nobackup
+set noswapfile
+set encoding=utf-8
+if has("gui_running")
+    set lines=1000 columns=1000
+endif
+set guioptions-=T
+
+" Remaps
+nnoremap ; : 
+"Easy window navigation
+map <C-h> <C-w>h
+map <C-k> <C-w>j
+
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+let g:tagbar_ctags_bin = "D:/Apps/Vim/vimfiles/bundle/tagbar/ctags58/ctags.exe"
+
+let mapleader=","
+
+"airline
+let g:airline_powerline_fonts=1
+let g:airline_theme="powerlineish"
+
