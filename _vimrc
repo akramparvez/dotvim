@@ -15,7 +15,9 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
  
 "Set Color Scheme and Font Options
+"git clone https://github.com/abra/obsidian2
 colorscheme obsidian2 
+"git clone https://github.com/eugeneching/consolas-powerline-vim
 set guifont=Powerline_Consolas:h12
  
 "better copy & paste
@@ -65,15 +67,19 @@ map <C-k> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-let g:tagbar_ctags_bin = "D:/Apps/Vim/vimfiles/bundle/tagbar/ctags58/ctags.exe"
+"git clone https://github.com/majutsushi/tagbar
+let g:tagbar_ctags_bin = "C:/Vim/vimfiles/bundle/tagbar/ctags58/ctags.exe"
 
 let mapleader=","
 
 "airline
+"git clone https://github.com/bling/vim-airline
+"git clone https://github.com/runsisi/consolas-font-for-powerline
 let g:airline_powerline_fonts=1
 let g:airline_theme="powerlineish"
 
 "ctrl p settings
+"git clone https://github.com/kien/ctrlp.vim.git
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
