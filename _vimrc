@@ -19,7 +19,9 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strf
 colorscheme obsidian2 
 "git clone https://github.com/eugeneching/consolas-powerline-vim
 set guifont=Powerline_Consolas:h12
- 
+set guifontwide=Nsimsun
+let g:Powerline_symbols="fancy"
+
 "better copy & paste
 set pastetoggle=<F2>
 set clipboard=unnamed
@@ -63,14 +65,14 @@ set guioptions-=T
 nnoremap ; : 
 "Easy window navigation
 map <C-h> <C-w>h
-map <C-k> <C-w>j
+map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+nmap <leader>, :w<cr>
+let mapleader=","
 
 "git clone https://github.com/majutsushi/tagbar
-let g:tagbar_ctags_bin = "C:/Vim/vimfiles/bundle/tagbar/ctags58/ctags.exe"
-
-let mapleader=","
+let g:tagbar_ctags_bin = "E:/Apps/Vim/vimfiles/bundle/tagbar/ctags58/ctags.exe"
 
 "airline
 "git clone https://github.com/bling/vim-airline
@@ -94,3 +96,19 @@ set listchars=tab:»·,nbsp:%,trail:·
 "Smash Escape
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+"NERDTree
+"git clone https://github.com/scrooloose/nerdtree.git
+let NERDTreeIgnore=['\.pyc$']
+autocmd vimenter * NERDTree | wincmd p
+
+"Pymode
+"git clone git://github.com/klen/python-mode.git
+let g:pymode_rope_lookup_project = 0
+let g:pymode_rope = 0
+let g:pymode_folding=1
+let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace()'
+
+"Conque Shell
+"https://code.google.com/p/conque/
+nmap <Leader>cmd :ConqueTermVSplit cmd<CR>
